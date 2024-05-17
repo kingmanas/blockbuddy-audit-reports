@@ -48,6 +48,8 @@ Lead Security Researcher:
     - [\[H-2\] `PasswordStore::setPassword` has no access controls meaning a non-owner can change the password](#h-2-passwordstoresetpassword-has-no-access-controls-meaning-a-non-owner-can-change-the-password)
   - [Informational](#informational)
     - [\[I-1\] `PasswordStore::getPassword` natspec indicates a parameter that doesn't exist , causing the natspec to be incorrect](#i-1-passwordstoregetpassword-natspec-indicates-a-parameter-that-doesnt-exist--causing-the-natspec-to-be-incorrect)
+  - [Medium](#medium)
+    - [\[M-1\] `PasswordStore::s_owner` is marked as private only , which will cost more gas](#m-1-passwordstores_owner-is-marked-as-private-only--which-will-cost-more-gas)
 
 # Protocol Summary
 
@@ -89,10 +91,10 @@ This is my first ever audit, so i used the basic auditing techniques to audit th
 | Severity | Number of issues found |
 | -------- | ---------------------- |
 | High     | 2                      |
-| Medium   | 0                      |
+| Medium   | 1                      |
 | Low      | 0                      |
 | Info     | 1                      |
-| Total    | 3                      |
+| Total    | 4                      |
 
 # Findings
 
@@ -116,7 +118,7 @@ make anvil
 
 2. Deploy the contract to the chain
 
-```
+```bash
 make deploy
 ```
 
@@ -205,3 +207,29 @@ According to the natspec the function `PasswordStore::getPassword` should have a
 - * @param newPassword The new password to set.
 
 ```
+## Medium
+
+### [M-1] `PasswordStore::s_owner` is marked as private only , which will cost more gas 
+
+**Discription:**
+
+```javascript
+
+-->>  address private s_owner;
+
+```
+
+**Impact:** More gas cost 
+
+**Proof of Concept:** Gas cost when marked only private
+```javascript
+ 450223 wei
+```
+
+Gas cost when also marked immutable
+
+```javascript
+ 429040 wei
+```
+
+**Recommended Mitigation:** Add the immutable keyword to the s_owner state variable to make it gas effecient.
