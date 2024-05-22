@@ -66,10 +66,10 @@ Lead Auditors:
 - [Informational](#informational)
     - [\[I-1\] Solidity pragma should be specific, not wide](#i-1-solidity-pragma-should-be-specific-not-wide)
     - [\[I-2\] Missing checks for `address(0)` when assigning values to address state variables](#i-2-missing-checks-for-address0-when-assigning-values-to-address-state-variables)
-    - [\[I-4\] Should name the State Variables better and be more explicit while declaring them..!!](#i-4-should-name-the-state-variables-better-and-be-more-explicit-while-declaring-them)
-    - [\[I-5\] `PuppyRaffle::selectWinner` does not follow CEI](#i-5-puppyraffleselectwinner-does-not-follow-cei)
-    - [\[I-6\] Use of "magic numbers" is discouraged](#i-6-use-of-magic-numbers-is-discouraged)
-    - [\[I-7\] State variables are missing events when updated..!!](#i-7-state-variables-are-missing-events-when-updated)
+    - [\[I-3\] Should name the State Variables better and be more explicit while declaring them..!!](#i-3-should-name-the-state-variables-better-and-be-more-explicit-while-declaring-them)
+    - [\[I-4\] `PuppyRaffle::selectWinner` does not follow CEI](#i-4-puppyraffleselectwinner-does-not-follow-cei)
+    - [\[I-5\] Use of "magic numbers" is discouraged](#i-5-use-of-magic-numbers-is-discouraged)
+    - [\[I-6\] State variables are missing events when updated..!!](#i-6-state-variables-are-missing-events-when-updated)
 </details>
 </br>
 
@@ -124,9 +124,9 @@ Puppy Rafle is a protocol dedicated to raffling off puppy NFTs with variying rar
 | High     | 3                      |
 | Medium   | 2                      |
 | Low      | 1                      |
-| Info     | 7                      |
+| Info     | 6                      |
 | Gas      | 3                      |
-| Total    | 16                     |
+| Total    | 15                     |
 
 # Findings :
 
@@ -508,9 +508,9 @@ Check for `address(0)` when assigning values to address state variables.
           feeAddress = newFeeAddress;
   ```
 
-### [I-4] Should name the State Variables better and be more explicit while declaring them..!!
+### [I-3] Should name the State Variables better and be more explicit while declaring them..!!
 
-### [I-5] `PuppyRaffle::selectWinner` does not follow CEI
+### [I-4] `PuppyRaffle::selectWinner` does not follow CEI
 
 ```diff
 +       _safeMint(winner, tokenId);
@@ -519,7 +519,7 @@ Check for `address(0)` when assigning values to address state variables.
 -       _safeMint(winner, tokenId);
 ```
 
-### [I-6] Use of "magic numbers" is discouraged
+### [I-5] Use of "magic numbers" is discouraged
 
 It can be confusing to see number literals in a codebase , and it's much more readable if numbers has a name for themselves.
 
@@ -537,4 +537,4 @@ Instead Use:
         uint256 public POOL_PRECISION = 100;
 ```
 
-### [I-7] State variables are missing events when updated..!!
+### [I-6] State variables are missing events when updated..!!
