@@ -66,9 +66,9 @@ The BlockBuddy team makes all effort to find as many vulnerabilities in the code
 | --------- | ---------------------- |
 | High      | 5                      |
 | Medium    | 1                      |
-| Low       | 7                      |
+| Low       | 8                      |
 | Info      | 0                      |
-| Total     | 13                     |
+| Total     | 14                     |
 
 
 # Findings :
