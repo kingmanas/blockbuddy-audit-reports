@@ -1,5 +1,11 @@
 # BlockBuddy: Solidity Audit Reports Portfolio
 
+<br/>
+<p align="center">
+<img src="./BlockBuddy.jpg" width="700" alt="thunder-loans">
+</p>
+<br/>
+
 Welcome to BlockBuddy's repository! This is where I showcase my expertise in auditing Solidity smart contracts. Here, you’ll find a collection of comprehensive audit reports demonstrating my thorough analysis, keen eye for vulnerabilities, and commitment to secure smart contract development. Dive in to explore detailed insights, methodologies, and the impact of my audits on enhancing blockchain security.
 
 ## Table of Contents
