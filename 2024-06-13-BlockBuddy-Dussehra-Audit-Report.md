@@ -74,8 +74,8 @@ The BlockBuddy team makes all effort to find as many vulnerabilities in the code
 | High      | 4                      |
 | Medium    | 2                      |
 | Low       | 9                      |
-| Info      | 4                      |
-| Total     | 19                     |
+| Info      | 5                      |
+| Total     | 20                     |
 
 # Findings :
 
@@ -712,7 +712,7 @@ address public SelectedRam;
 
 </details>
 
-### I-3: In `ChoosingRam::increaseValuesOfParticipants` function booleans are compared with booloean constants
+### I-4: In `ChoosingRam::increaseValuesOfParticipants` function booleans are compared with booloean constants
 
 <details>
 <summary> Some Instances </summary>
@@ -841,7 +841,7 @@ if (random == 0) {
 
 Booleans can directly be checked for true or false rather than comparing them to a boolean constant
 
-### I-4: In `ChoosingRam::increaseValuesOfParticipants` , the function has become very complex and has a complexity score of more than 11
+### I-5: In `ChoosingRam::increaseValuesOfParticipants` , the function has become very complex and has a complexity score of more than 11
 
 **Description**
 
