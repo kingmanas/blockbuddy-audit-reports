@@ -1,0 +1,19 @@
+{
+  "name": "BlockBuddy",
+  "description": "BlockBuddy - Your friendly guide into the wild world of Blockchain. Powered by Luffy’s energy ⚡️.",
+  "image": "https://raw.githubusercontent.com/kingmanas/blockbuddy-audit-reports/main/BlockBuddy.jpg",
+  "attributes": [
+    {
+      "trait_type": "Vibe",
+      "value": "Positive"
+    },
+    {
+      "trait_type": "Energy",
+      "value": "Infinite"
+    },
+    {
+      "trait_type": "Style",
+      "value": "One Piece Inspired"
+    }
+  ]
+}
